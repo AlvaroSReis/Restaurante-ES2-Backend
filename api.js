@@ -10,3 +10,13 @@ client.connect();
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
+
+app.get('/usuario', (req, res)=>{
+    client.query(`Select * from usuario`, (err, result)=>{
+        if(!err){
+            res.send(result.rows);
+        }
+    });
+    client.end;
+})
+client.end();
