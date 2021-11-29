@@ -7,3 +7,6 @@ app.listen(3300, ()=>{
 })
 
 client.connect();
+
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
